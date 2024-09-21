@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>방문 요일에 따른 배경색 변경</title>
+  </head>
+  <body>
+    <h3>일요일은 pink, 다른 요일은 gold</h3>
+    <hr />
+    <script>
+      var now = new Date();
+      switch (now.getDay()) {
+        case 0:
+          document.write('오늘 : ' + now.getDate() + '일,' + '일요일');
+          document.body.style.backgroundColor = 'pink';
+          break;
+        case 1:
+          document.write('오늘 : ' + now.getDate() + '일,' + '월요일');
+          document.body.style.backgroundColor = 'gold';
+          break;
+        case 2:
+          document.write('오늘 : ' + now.getDate() + '일,' + '화요일');
+          document.body.style.backgroundColor = 'gold';
+          break;
+        case 3:
+          document.write('오늘 : ' + now.getDate() + '일,' + '수요일');
+          document.body.style.backgroundColor = 'gold';
+          break;
+        case 4:
+          document.write('오늘 : ' + now.getDate() + '일,' + '목요일');
+          document.body.style.backgroundColor = 'gold';
+          break;
+        case 5:
+          document.write('오늘 : ' + now.getDate() + '일,' + '금요일');
+          document.body.style.backgroundColor = 'gold';
+          break;
+        case 6:
+          document.write('오늘 : ' + now.getDate() + '일,' + '토요일');
+          document.body.style.backgroundColor = 'gold';
+          break;
+      }
+    </script>
+  </body>
+</html>
