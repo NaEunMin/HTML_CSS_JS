@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>book 객체 만들기</title>
+  </head>
+  <body>
+    <h3>book 객체 배열 만들기</h3>
+    <hr />
+    <script>
+      var bookArray = new Array(); //for문에 넣으면 매번 배열이 초기화되어 정상적으로 작동이 안됨에 주의
+      for (var i = 0; i < 5; i++) {
+        var data = prompt('콤마로 분리하면서 책제목 저자 가격 순으로 입력');
+        var cutData = data.split(',');
+        var book = new Object();
+        book.title = cutData[0];
+        book.author = cutData[1];
+        book.price = parseInt(cutData[2]); //prompt로 문자열로 받았기에 정수로 바꾸어줘야함
+        bookArray[i] = book;
+        document.write(
+          bookArray[i].title +
+            ',' +
+            bookArray[i].author +
+            ',' +
+            bookArray[i].price
+        );
+        document.write('<br>');
+      }
+      document.write('<hr>');
+      var expensiveBook;
+      var max = 0;
+      for (var i = 0; i < bookArray.length; i++) {
+        if (bookArray[i].price > max) {
+          max = bookArray[i].price;
+          expensiveBook = bookArray[i].title;
+        }
+      }
+      document.write('가장 가격이 비싼 책은 ' + expensiveBook);
+    </script>
+  </body>
+</html>
