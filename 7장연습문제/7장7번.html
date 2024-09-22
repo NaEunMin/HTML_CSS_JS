@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17개의 CSS2 색이름과 색</title>
+    <style>
+      div {
+        display: inline-block;
+        width: 60px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>17개의 CSS2 색이름과 색</h3>
+    <hr />
+    <script>
+      //어떤 로직이 있는 게 아니라 var str 처럼 강제로 짜맞춰야하는 느낌인듯하다
+      var colorNames = [
+        'maroon',
+        'red',
+        'orange',
+        'yellow',
+        'olive',
+        'purple',
+        'fuchsia',
+        'white',
+        'lime',
+        'green',
+        'navy',
+        'blue',
+        'aqua',
+        'teal',
+        'black',
+        'silver',
+        'gray',
+      ];
+      for (var i = 0; i < colorNames.length; i++) {
+        var str = "<div style='background-color:";
+        str += colorNames[i];
+        str += "'>" + colorNames[i] + '</div>';
+        document.write(str);
+      }
+    </script>
+  </body>
+</html>
