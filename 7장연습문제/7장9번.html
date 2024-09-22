@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>book 객체 만들기</title>
+  </head>
+  <body>
+    <h3>book 객체 만들기</h3>
+    <hr />
+    <script>
+      var book = new Object();
+      book.title = 'HTML5';
+      book.author = '황기태';
+      book.price = '20000';
+      document.write('new Object => ');
+      document.write(
+        'book : ' + book.title + ',' + book.author + ',' + book.price
+      );
+    </script>
+    <br />
+    <script>
+      var book = {
+        title: 'HTML5',
+        author: '황기태',
+        price: '20000',
+      };
+      document.write('리터럴 = > ');
+      document.write(
+        'book : ' + book.title + ',' + book.author + ',' + book.price
+      );
+    </script>
+    <br />
+    <script>
+      function book(title, author, price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+      }
+      var test = new book('HTML5', '황기태', '20000');
+      document.write('프로토타입 => ');
+      document.write(
+        'book : ' + test.title + ',' + test.author + ',' + test.price
+      );
+    </script>
+  </body>
+</html>
