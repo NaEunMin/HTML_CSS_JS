@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transfrom:rotate()</title>
+  </head>
+  <body>
+    <h3>클릭하면 2,3,4배 옆으로 늘어납니다.</h3>
+    <hr />
+    <img
+      src="media/spongebob.png"
+      width="110"
+      height="140"
+      onclick="increase(this)"
+    />
+    <script>
+      let x = 2;
+      function increase(obj) {
+        obj.style.transform = `scale(${x},1)`;
+        x += 1;
+      }
+    </script>
+  </body>
+</html>
