@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onkeydown</title>
+  </head>
+  <body>
+    <h3>계산기 만들기</h3>
+    <hr />
+    <p>수식을 입력하고 Enter키를 입력하세요.</p>
+    <script>
+      function math(e) {
+        if (e.key == 'Enter') {
+          let exp = document.getElementById('exp');
+          let result = document.getElementById('result');
+          result.value = eval(exp.value);
+        }
+      }
+    </script>
+    식<input type="text" value="" id="exp" onkeydown="math(event)" />
+    <br />
+    값<input type="text" value="" id="result" />
+  </body>
+</html>
