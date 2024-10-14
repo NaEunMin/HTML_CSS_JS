@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사이트</title>
+  </head>
+  <body>
+    <script>
+      function change() {
+        let select = document.getElementById('site');
+        let url = select.options[site.selectedIndex].value;
+        window.open(url, ' ', 'width=400, height=500');
+      }
+    </script>
+    <h3>옵션 선택으로 사이트 접속</h3>
+    옵선 선택마다 새 윈도우에 접속합니다.
+    <hr />
+    접속할 사이트
+    <br />
+    <select id="site" onchange="change()">
+      <option value="http://www.naver.com">네이버</option>
+      <option value="http://www.google.com">구글</option>
+      <option value="http://www.daum.net">다음</option>
+    </select>
+  </body>
+</html>
